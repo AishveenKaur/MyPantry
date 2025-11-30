@@ -5,7 +5,7 @@ import org.mykitchen.mcp.models.Ingredient;
 
 public class PantryService {
     private Connection connect() throws SQLException {
-        return DriverManager.getConnection("jdbc:sqlite:data/pantry.db");
+        return DriverManager.getConnection("jdbc:sqlite:../data/pantry.db");
     }
 
     public String addIngredient(Ingredient ing) {
