@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "name": "Smart Pantry MCP",
+  "description": "Manage pantry inventory",
+  "tools": {
+    "getPantryItems": {
+      "description": "Returns list of pantry items",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    "addItem": {
+      "description": "Add an item to pantry",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "item": { "type": "string" }
+        },
+        "required": ["item"]
+      }
+    },
+    "removeItem": {
+      "description": "Remove an item from pantry",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "item": { "type": "string" }
+        },
+        "required": ["item"]
+      }
+    }
+  }
+}

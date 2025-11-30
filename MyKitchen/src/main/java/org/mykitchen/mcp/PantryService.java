@@ -9,17 +9,23 @@ public class PantryService {
     }
 
     public String addIngredient(Ingredient ing) {
-        try (Connection con = connect()) {
-            PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO ingredients(name, quantity) VALUES (?, ?) " +
-                            "ON CONFLICT(name) DO UPDATE SET quantity = quantity + ?;"
-            );
+        String sql = """
+        INSERT INTO ingredients(name, quantity)
+        VALUES (?, ?)
+        ON CONFLICT(name) DO UPDATE SET quantity = quantity + excluded.quantity;
+        """;
+
+        try (Connection con = connect();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+
             ps.setString(1, ing.name);
             ps.setInt(2, ing.quantity);
-            ps.setInt(3, ing.quantity);
             ps.executeUpdate();
-            return "Added";
-        } catch (Exception e) { return e.getMessage(); }
+
+            return "Added " + ing.name;
+        } catch (Exception e) {
+            return e.getMessage();
+        }
     }
 
     public List<Ingredient> listIngredients() {

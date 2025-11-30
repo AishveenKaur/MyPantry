@@ -10,6 +10,10 @@ public class SmartPantryServer {
     private static RecipeService recipes = new RecipeService();
     private static Gson gson = new Gson();
 
+    public static PantryService getPantry() {
+        return pantry;
+    }
+
     public static void main(String[] args) {
         System.out.println("SmartPantry MCP Server Running...");
 

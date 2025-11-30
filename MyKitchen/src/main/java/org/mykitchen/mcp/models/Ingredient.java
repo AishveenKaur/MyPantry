@@ -6,4 +6,12 @@ public class Ingredient {
     public Ingredient(String name, int quantity) {
         this.name = name; this.quantity = quantity;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
 }
