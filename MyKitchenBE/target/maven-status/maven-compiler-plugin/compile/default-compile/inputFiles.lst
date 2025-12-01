@@ -1,0 +1,5 @@
+/Users/aishveenkaur/Projects/MyPantry/MyKitchenBE/src/main/java/org/mykitchen/be/MyKitchenBeApplication.java
+/Users/aishveenkaur/Projects/MyPantry/MyKitchenBE/src/main/java/org/mykitchen/be/model/Ingredient.java
+/Users/aishveenkaur/Projects/MyPantry/MyKitchenBE/src/main/java/org/mykitchen/be/repository/IngredientRepository.java
+/Users/aishveenkaur/Projects/MyPantry/MyKitchenBE/src/main/java/org/mykitchen/be/controller/PantryController.java
+/Users/aishveenkaur/Projects/MyPantry/MyKitchenBE/src/main/java/org/mykitchen/be/service/PantryService.java

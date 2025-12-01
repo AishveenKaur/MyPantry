@@ -1,0 +1,5 @@
+org/mykitchen/be/repository/IngredientRepository.class
+org/mykitchen/be/MyKitchenBeApplication.class
+org/mykitchen/be/model/Ingredient.class
+org/mykitchen/be/service/PantryService.class
+org/mykitchen/be/controller/PantryController.class
